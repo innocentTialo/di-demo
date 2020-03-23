@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
  * Created by InnocentTIALO on 3/21/2020.
  */
 @Service
-@Primary
 public class SetterGreetingService implements GreetingService {
     @Override
     public String sayGreetings() {

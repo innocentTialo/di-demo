@@ -9,13 +9,13 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class MyController {
 
-    private GreetingService greetingServiceImpl1;
+    private GreetingService greetingService;
 
-    public MyController(GreetingService greetingServiceImpl1) {
-        this.greetingServiceImpl1 = greetingServiceImpl1;
+    public MyController(GreetingService greetingService) {
+        this.greetingService = greetingService;
     }
 
     public void hello () {
-        System.out.println(greetingServiceImpl1.sayGreetings());
+        System.out.println(greetingService.sayGreetings());
     }
 }
