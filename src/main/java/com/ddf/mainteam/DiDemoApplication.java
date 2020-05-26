@@ -5,6 +5,7 @@ import com.ddf.mainteam.controllers.MyController;
 import com.ddf.mainteam.controllers.PropertyInjectedController;
 import com.ddf.mainteam.controllers.SetterInjectedController;
 import com.ddf.mainteam.examplebeans.FakeDataSource;
+import com.ddf.mainteam.examplebeans.FakeJmsBroker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -21,6 +22,10 @@ public class DiDemoApplication {
         FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
 
         System.out.println(fakeDataSource.getUsername());
+
+        FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+
+        System.out.println(fakeJmsBroker.getUsername());
     }
 
 }
